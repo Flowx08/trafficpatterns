@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Copenhagen traffic</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="./css/styles.css" rel="stylesheet" />
+
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container px-4">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link"
+                            href="https://github.com/Flowx08/trafficpatterns">Repository</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="bg-primary bg-gradient text-white">
+        <div class="container px-4 text-center">
+            <h1 class="fw-bolder">Traffic patterns in Copenhagen and New-York </h1>
+            <p class="lead">A traffic analysis in Copenhagen and New-York </p>
+            <a href="https://github.com/Flowx08/trafficpatterns" class="btn btn-lg btn btn btn-success"
+                role="button">Repository</a>
+        </div>
+    </header>
+    <!-- About section-->
+    <section id="Introduction">
+        <div class="container px-4">
+            <div class="row gx-4 justify-content-center pb-4">
+                <div class="col-lg-8">
+                    <h1>Introduction</h1>
+                    <p class="lead">
+                        In this article we explore how the weather conditions affect bicycle and car use in the cities
+                        Copenhagen and New
+                        York. Additionally, we seek for unexpected patterns in traffic and we compare them for the two
+                        cities. But how did
+                        we get our data?
+                    </p>
+                    <p class="lead">
+                        Across the city of Copenhagen and New-York there are special machines that can detect the
+                        movement of bikes and
+                        cars. These machines collect data about the traffic in the city day and night. Our analysis is
+                        based on the data
+                        coming from those machines and from historical weather data. We use data analysis methods and
+                        visualizations to
+                        reveal insights about how people decide to commute according to weather conditions.
+                    </p>
+
+                    <p class="lead">
+                        Furthermore, we utilized machine learning algorithms to predict the traffic based on the
+                        weather, time and day, as
+                        well as to gain a better understanding regarding the relationships amongst the variables.
+                    </p>
+                    <p class="lead">
+                        In short, we want to answer one question: How does traffic patterns differ between Copenhagen
+                        and New-York city?
+                        Let's find out!
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="row gx-4 justify-content-center pb-4 pt-4">
+                <div class="col-lg-8">
+                    <h1>Patterns across time</h1>
+                    <p class="lead">
+                        First, we though that it would be interesting to see how the traffic changes through time, over
+                        the hours, days,
+                        and weeks. To better understand the patterns in the traffic that emerge through time we create 3
+                        visualizations
+                        for each city.
+                    </p>
+
+                    <p class="lead">
+                        In the first plot we display the distribution of counted vehicles and bicycles for every hour of
+                        the day. From
+                        this plot we can see that the traffic peaks two time once in the morning and once in the evening
+                        when people
+                        commute to and from work. Some interesting differences between the two cities is that while the
+                        vehicle traffic
+                        in Copenhagen is mainly distributed around commute hours and there is low traffic at night, in
+                        NYC the vehicle
+                        traffic is distributed more evenly and there is often some traffic even at during nighttime. It
+                        is also possible
+                        to see that the peaking hours are different between the two cities. In Copenhagen the traffic
+                        peaks at 8 AM and
+                        at 6 PM while in NYC the traffic peaks at 9 AM and 7 PM.
+                    </p>
+                    <div id="figure1"></div>
+                    <p class="lead">
+                        In the second plot we visualized the distribution of counted vehicles and bicycles for every day
+                        of the week. From
+                        this plot we can see that in Copenhagen both vehicle and bicycle traffic is lower during the
+                        weekend compared to the
+                        other days of the week. On the other hand, in NYC the vehicle traffic is higher in the weekend
+                        compared to the
+                        weekdays.
+                    </p>
+                    <div id="figure2"></div>
+                    <p class="lead">
+                        Finally, in the third plot, we displayed the distribution of counted vehicles and bicycles for
+                        every hour of the
+                        week. From this visualization we can see that in NYC during Friday and Saturday night there is a
+                        good amount of
+                        traffic compared to Copenhagen. Infact, on average, the vehicle traffic in NYC at midnight on
+                        Saturday is about 50%
+                        of the vehicle traffic in a normal weekday. On the other hand, in Copenhagen the vehicle traffic
+                        at midnight on
+                        Saturday is on average about 25% or less of the vehicle traffic in a normal weekday.
+                    </p>
+                    <div id="figure3"></div>
+                </div>
+            </div>
+
+            <div class="row gx-4 justify-content-center pb-4 pt-4">
+                <div class="col-lg-8">
+                    <h1>How the weather influences traffic?</h1>
+                    <p class="lead">
+                        To better understand the relationship between traffic and different weather condition we
+                        developed some
+                        visualizations to see how different values of a single weather parameter such as temperature,
+                        wind speed and
+                        humidity would affect the traffic. We first focused on bicycle traffic and then on vehicle
+                        traffic for both
+                        cities.
+
+                    </p>
+                    <p class="lead">
+                        As it is visible from the plot, there seems to be a linear correlation between bicycle traffic
+                        and temperature.
+                        Infact, on average, as the temperature decreases also the bicycle traffic does and vice versa if
+                        the temperature
+                        increases also the bicycle traffic is likely to increase compared to the average traffic. For
+                        instance, in
+                        Copenhagen when there are 20 C there is usually about 50% more bicycle traffic compared to the
+                        average. This
+                        finding makes sense as it is more comfortable to bike at higher temperatures and thus people are
+                        more likely to
+                        use the bike when the weather is good.
+
+                    </p>
+                    <p class="lead">
+                        If we focus on wind, we see that while it doesn't seem to influence the bicycle traffic in
+                        Copenhagen, we see
+                        that in New York people are less likely to use the bike on windy days.
+
+                    </p>
+                    <p class="lead">
+                        Finally if we consider the air humidity, we can see that in both cities if the humidity is too
+                        high (greater
+                        than 70%) than the bicycle traffic tends to decrease. This result makes sense considering that
+                        high humidity is
+                        also related to rain, and biking under the rain is more uncomfortable which might explain this
+                        finding.
+                    </p>
+                    <div id="figure4"></div>
+                    <p class="lead">
+                        We repeated the same analysis but this time using vehicle traffic data instead of bicycle
+                        traffic. We found that
+                        there is not clear correlation between vehicle traffic and weather conditions as the
+                        visualization appear noisy.
+                    </p>
+                    <div id="figure5"></div>
+                    <p class="lead">
+                        We also analyzed bicycle traffic considering multiple weather parameters at the same time. We
+                        made a visualization
+                        where we can see how the bicycle traffic changes with specific temperature and wind speed ranges
+                        simultaneously. In
+                        this plot a blue rectangle represents lower than average traffic and red rectangle represents
+                        higher than average
+                        traffic, while violet color represents no difference.
+                    </p>
+                    <p class="lead">
+                        <i>(*the following plot might not work in some browsers, should work in safari)</i>
+                    </p>
+                    <div id="figure6"></div>
+                    <div id="figure7"></div>
+                    <p class="lead">
+                        Below you can play see and play around with how weather conditions influence the traffic in in
+                        various parts of
+                        New-York and Copenhagen.
+                    </p>
+                </div>
+            </div>
+            <div class="row gx-4 justify-content-center pb-2">
+                <div class="col-lg-8" align="center">
+                    <p class="lead">
+                        <b>Copenhagen bicycle data humidity, temperature</b>
+                    </p>
+                </div>
+                <div class="col-6" align="right">
+                    <iframe src="./visualizations/Copenhagen_map_temperature_bicycles.html" title=""
+                        style="width:360px; height: 400px;"></iframe>
+                </div>
+                <div class="col-6" align="left">
+                    <iframe src="./visualizations/Copenhagen_map_humidity_bicycles.html" title=""
+                        style="width:360px; height: 400px;"></iframe>
+                </div>
+            </div>
+            <div class="row gx-4 justify-content-center pb-2">
+                <div class="col-lg-8" align="center">
+                    <p class="lead">
+                        <b>Copenhagen vehicle data humidity, temperature</b>
+                    </p>
+                </div>
+                <div class="col-6" align="right">
+                    <iframe src="./visualizations/Copenhagen_map_temperature_vehicles.html" title=""
+                        style="width:360px; height: 400px;"></iframe>
+                </div>
+                <div class="col-6" align="left">
+                    <iframe src="./visualizations/Copenhagen_map_humidity_vehicles.html" title=""
+                        style="width:360px; height: 400px;"></iframe>
+                </div>
+            </div>
+            <div class="row gx-4 justify-content-center pb-2">
+                <div class="col-lg-8" align="center">
+                    <p class="lead">
+                        <b>New York bicycle data humidity, temperature</b>
+                    </p>
+                </div>
+                <div class="col-6" align="right">
+                    <iframe src="./visualizations/New_York_map_temperature_bicycles.html" title=""
+                        style="width:360px; height: 400px;"></iframe>
+                </div>
+                <div class="col-6" align="left">
+                    <iframe src="./visualizations/New_York_map_humidity_bicycles.html" title=""
+                        style="width:360px; height: 400px;"></iframe>
+                </div>
+            </div>
+
+            <div class="row gx-4 justify-content-center">
+                <div class="col-lg-8">
+                    <h1>Tackling the problem with machine learning</h1>
+                    <p class="lead">
+                        Let’s see if we can predict the traffic in the Copenhagen and NYC based on weather and time
+                        data. But
+                        first
+                        things first. Let’s see how the histograms of our target variable, count are like:
+                    </p>
+                </div>
+            </div>
+            <div class="row gx-4 justify-content-center">
+                <div class="col-6" align="right">
+                    <img src="./visualizations/Count Histogram-Copenhagen.png" style="width: 420px; height: auto">
+                </div>
+                <div class="col-6" align="left">
+                    <img src="./visualizations/Count Histogram-NYC.png" style="width: 420px; height: auto">
+                </div>
+            </div>
+            <div class="row gx-4 justify-content-center">
+                <div class="col-lg-8">
+                    <p class="lead">
+                        It seems that in both cases it’s a power law distribution.
+                    </p>
+                    <p class="lead">
+                        We are interested in the ‘count’ variable which shows how many vehicles and bicycles there are
+                        at specific
+                        location
+                        points at a specific time. We observe that for the Copenhagen dataset the strongest correlation
+                        is between
+                        count and
+                        longitude, hour and rhum. Rhum measures the relative humidity percentagewise. It is expected
+                        that the
+                        relationship
+                        between count and rhum has a negative sign, due to the fact that higher the level of humidity
+                        the less
+                        people
+                        commute, especially if we consider that humidity has a direct relationship to raining.
+                        Furthermore, it’s
+                        interesting
+                        that longitude has more that 6 times the impact to traffic than latitude.
+                        It also seems that wind direction (wdir) does not affect vehicle and bikes usage (-0.00025).
+                        Moving on to NYC data, we observe that longitude and latitude affect traffic the same with
+                        -0.43. Looking
+                        closer
+                        though at longitude and latitude we observe a correlation of 1 between these two. This happens
+                        due to lost
+                        data that
+                        were filled in with the same values both for longitude and latitude. Regarding the weather
+                        conditions, the
+                        strongest
+                        correlation exists between count and wind speed, again in negative manner as expected.
+                    </p>
+                </div>
+                <div class="col-6 pb-2" align="right">
+                    <img src="./visualizations/Copenhagen correlation matrix.png" style="width: 420px; height: auto">
+                </div>
+                <div class="col-6 pb-2" align="left">
+                    <img src="./visualizations/NYC correlation matrix.png" style="width: 420px; height: auto">
+                </div>
+            </div>
+            
+            <div class="row gx-4 justify-content-center">
+                <div class="col-lg-8">
+                    <p class="lead">
+                        We want to predict the number of vehicles and bikes which is an integer, thus we need a regression model.
+                        The model we are choosing for this task is a fundamental one and it’s no other than Linear Regression. What
+                        the model will try to achieve is to find the best fitted line (or space, more accurately ) between the given
+                        data and then figure out the value that we want to predict for a new dataset. Some basics on Linear
+                        Regression, here : <a href="https://en.wikipedia.org/wiki/Linear_regression">https://en.wikipedia.org/wiki/Linear_regression</a>
+            
+                    </p>
+                    <p class="lead">
+                        With a push of a button (merely), the results are in!
+                    </p>
+                    <p class="lead">
+                        Let’s see them!
+                    </p>
+                </div>
+                <div class="col-6 pb-2" align="right">
+                    <img src="./visualizations/actual_vs_predicted_copenhagen.png" style="width: 420px; height: auto">
+                </div>
+                <div class="col-6 pb-2" align="left">
+                    <img src="./visualizations/actual_vs_predicted_nyc.png" style="width: 420px; height: auto">
+                </div>
+            </div>
+            
+            <div class="row gx-4 justify-content-center">
+                <div class="col-lg-8">
+                    <p class="lead">
+                        We can clearly see that the data does not follow the purple line as they should have if the model was
+                        working. Additionally, we calculated evaluations metrics such as Pearson’s correlation coefficient and
+                        R-squared with average values for the 2 datasets 0.17 and 0.03, respectively. As we mentioned before, the
+                        real data follow a power law distribution while Linear Regression and most basic machine learning algorithms
+                        assume that the data are distributed normally. Looking at the histograms, we can confirm that the predicted
+                        values follow normal distributions but the real data follow exponential ones.
+                    </p>
+                </div>
+                <div class="col-6 pb-2" align="right">
+                    <img src="./visualizations/True and Predicted - Copenhagen.png" style="width: 420px; height: auto">
+                </div>
+                <div class="col-6 pb-2" align="left">
+                    <img src="./visualizations/True and Predicted - NYC.png" style="width: 420px; height: auto">
+                </div>
+            </div>
+            
+            <div class="row gx-4 justify-content-center">
+                <div class="col-lg-8">
+                    <p class="lead">
+                        Next, we use another machine learning model, called hierarchical clustering in order to explore relationships
+                        amongst traffic and other variables in the dataset.
+                    </p>
+                </div>
+                <div class="col-6 pb-2" align="right">
+                    <img src="./visualizations/Copenhagen clusterhoursdays.png" style="width: 420px; height: auto">
+                </div>
+                <div class="col-6 pb-2" align="left">
+                    <img src="./visualizations/NYC clusterhoursdays.png" style="width: 420px; height: auto">
+                </div>
+            </div>
+            
+            <div class="row gx-4 justify-content-center">
+                <div class="col-lg-8">
+                    <p class="lead">
+                        The first clustermaps present the traffic clustered by hour and day. We observe that in general we have more
+                        vehicles and bikes percentagewise for Copenhagen. Furthermore, it seems that on Sunday Copenhageners leave their
+                        vehicles at home for the most part of the day, which is not the case for New Yorkers.
+                    </p>
+                    <p class="lead">
+                        The next two clustermaps show traffic clustered by type and day. We can see that for Tuesday, Wednesday and Thursday
+                        there is heavy use of both vehicles and bikes in Copenhagen which is not the case for New York City. Additionally,
+                        the use of individual transportation seems similar for the weekend for the two cities.
+                    </p>
+                </div>
+                <div class="col-6 pb-2" align="right">
+                    <img src="./visualizations/Copenhagen clustertype.png" style="width: 420px; height: auto">
+                </div>
+                <div class="col-6 pb-2" align="left">
+                    <img src="./visualizations/NYC clustertype.png" style="width: 420px; height: auto">
+                </div>
+            </div>
+
+            <div class="row gx-4 justify-content-center pb-4 pt-4">
+                <div class="col-lg-8">
+                    <h1>Conclusion</h1>
+                    <p class="lead">
+                        In conclusion, in this article we wanted to explore the traffic patterns of Copenhagen and New York and how
+                        these patterns are influenced by the weather. We showed that Copenhageners are more resistant to weather
+                        conditions than New-Yorkers as well as we found interesting patterns for when people are riding bicycles.
+                
+                    </p>
+                    <p class="lead">
+                        Hopefully, we made the content enjoyable to explore!
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container px-4">
+            <p class="m-0 text-center text-white">Copyright &copy; trafficpatterns 2022</p>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bokeh JS-->
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.0.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.4.0.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.4.0.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-gl-2.4.0.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-mathjax-2.4.0.min.js" crossorigin="anonymous"></script>
+
+    <!-- Core theme JS-->
+    <script src="./js/scripts.js"></script>
+
+    <script>
+        function readTextFile(file, callback) {
+            var rawFile = new XMLHttpRequest();
+            rawFile.overrideMimeType("application/json");
+            rawFile.open("GET", file, true);
+            rawFile.onreadystatechange = function () {
+                if (rawFile.readyState === 4 && rawFile.status == "200") {
+                    callback(rawFile.responseText);
+                }
+            }
+            rawFile.send(null);
+        }
+
+        readTextFile("./visualizations/vis1.json", function (text) {
+            let data = JSON.parse(text);
+            Bokeh.embed.embed_item(data, "figure1");
+        });
+        readTextFile("./visualizations/vis2.json", function (text) {
+            let data = JSON.parse(text);
+            Bokeh.embed.embed_item(data, "figure2");
+        });
+        readTextFile("./visualizations/vis3.json", function (text) {
+            let data = JSON.parse(text);
+            Bokeh.embed.embed_item(data, "figure3");
+        });
+        readTextFile("./visualizations/vis4.json", function (text) {
+            let data = JSON.parse(text);
+            Bokeh.embed.embed_item(data, "figure4");
+        });
+        readTextFile("./visualizations/vis5.json", function (text) {
+            let data = JSON.parse(text);
+            Bokeh.embed.embed_item(data, "figure5");
+        });
+        readTextFile("./visualizations/vis6.json", function (text) {
+            let data = JSON.parse(text);
+            Bokeh.embed.embed_item(data, "figure6");
+        });
+        readTextFile("./visualizations/vis7.json", function (text) {
+            let data = JSON.parse(text);
+            Bokeh.embed.embed_item(data, "figure7");
+        });
+
+    </script>
+</body>
+
+</html>
